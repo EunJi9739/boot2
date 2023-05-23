@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/main}">
+<main layout:fragment="content">
+    <th:block th:object="${view}">
+        <dl>
+            <dt th:text="#{board.subject}"></dt>
+            <dd>
+               <input type="text" name="subject" th:field="*{subject}">
+            </dd>
+        </dl>
+
+        <dl>
+            <dt th:text="#{board.content}"></dt>
+            <dd>
+                <textarea name="content" th:field="*{content}"></textarea>
+            </dd>
+        </dl>
+    </th:block>
+</main>
+</html>
